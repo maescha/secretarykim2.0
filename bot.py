@@ -14,6 +14,16 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 class MyClient(discord.Client):
   async def on_ready(self):
     print('Logged on as {0}!'.format(self.user))
+    
+  # Responding to Messages
+  async def on_message(self, message):
+    if message.author == self.user:
+      return
+
+    if message.content.startswith('`hello'):
+      await message.channel.send('Hello World!')
+    
+    await self.process_commands(message)
 
 ## intents
 intents = discord.Intents.default()
@@ -22,13 +32,7 @@ intents.members = True
 # intents.typing = False
 # intents.presences = False
 
-client = MyClient(command_prefix='!', intents=intents)
+# client = MyClient(command_prefix='!', intents=intents)
+client = MyClient(intents=intents)
 client.run(bot_token, log_handler=handler, log_level=logging.DEBUG) 
 
-# Responding to Messages
-# async def on_message(self, message):
-#   if message.author == self.user:
-#     return
-
-#   if message.content.startswith('$hello'):
-#     await message.channel.send('Hello World!')
