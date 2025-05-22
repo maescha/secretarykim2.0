@@ -5,7 +5,8 @@ original: https://github.com/maescha/secretary-kim
 
 ## When Replicating
 
-1. Create a .env file
+1. run `pip install -p .\requirements.txt`
+2. Create a .env file
 - add discord bot token  from https://discord.com/developers/applications/
 match it to `discordbotoken`
 
