@@ -3,12 +3,21 @@ import logging
 import os
 from dotenv import load_dotenv
 
+import requests
+import json
+
 load_dotenv()
 bot_token= os.getenv('DISCORDTOKEN')
 # print(bot_token)
 
 ## basic logging
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+
+## getting memes from memeapi // meme-api.com/gimme
+def get_meme():
+  response = requests.get('https://meme-api.com/gimme')
+  json_data = json.loads(response.text)
+  return json_data['url']
 
 ## Logging on into server as the bot
 class MyClient(discord.Client):
@@ -22,6 +31,9 @@ class MyClient(discord.Client):
 
     if message.content.startswith('`hello'):
       await message.channel.send('Hello World!')
+      
+    if message.content.startswith('`meme'):
+      await message.channel.send(get_meme())
     
 ## intents
 intents = discord.Intents.default()
