@@ -23,8 +23,6 @@ class MyClient(discord.Client):
     if message.content.startswith('`hello'):
       await message.channel.send('Hello World!')
     
-    await self.process_commands(message)
-
 ## intents
 intents = discord.Intents.default()
 intents.message_content = True
@@ -32,7 +30,6 @@ intents.members = True
 # intents.typing = False
 # intents.presences = False
 
-# client = MyClient(command_prefix='!', intents=intents)
-client = MyClient(intents=intents)
+client = MyClient(command_prefix='`', intents=intents)
 client.run(bot_token, log_handler=handler, log_level=logging.DEBUG) 
 
