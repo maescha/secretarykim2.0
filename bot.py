@@ -35,13 +35,24 @@ class MyClient(discord.Client):
     if message.content.startswith('`meme'):
       await message.channel.send(get_meme())
     
+    if message.content.startswith('`ping'):
+      await message.channel.send('pong!')
+    
+    if message.content.startswith('`poll'):
+      # removes the `poll text in the title
+      title_content = message.content[len('`poll'):].strip()
+      
+      embed = discord.Embed(title=title_content, description='I, Secretary Kim, have voted once in both choices.')
+      poll_message = await message.channel.send(embed=embed)
+      await poll_message.add_reaction('👍')
+      await poll_message.add_reaction('👎')
+    
 ## intents
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
-# intents.typing = False
-# intents.presences = False
+intents.polls = True
 
-client = MyClient(command_prefix='`', intents=intents)
+client = MyClient(intents=intents)
 client.run(bot_token, log_handler=handler, log_level=logging.DEBUG) 
 
