@@ -19,9 +19,7 @@ You will know that you are successfully logged into your Discord server as the b
 
 ```Logged on as Secretary Kim 2.0#3142!```
 
-## Todo features
-
-- fulfill steps in https://www.codedex.io/projects/build-a-discord-bot-with-python
+## Todo features (optional in future)
 
 - use tvmaze api to show web/streaming schedule of tv shows 
 https://www.tvmaze.com/api
