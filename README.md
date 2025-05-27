@@ -5,11 +5,12 @@ original: https://github.com/maescha/secretary-kim
 
 ## When Replicating
 
-1. run `pip install -p .\requirements.txt`
-2. Create a .env file
-
-- add discord bot token from https://discord.com/developers/applications/
-  match it to `DISCORDTOKEN`
+1. run `pip install -r requirements.txt`
+   > or `[py/python3] -m pip install -U discord.py` and `py -m pip install requests` and `py -m pip install python-dotenv`
+2. Create a .env filE and save a new `DISCORDTOKEN` variable with the reset token key from https://discord.com/developers/applications/[...]/bot or the **bot tab**
+   - should be formatted like this:
+     `DISCORDTOKEN=123456789456`
+     > **TOKEN WAS RESET 5/27/2025**
 
 ## How to Run
 
