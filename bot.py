@@ -19,6 +19,24 @@ def get_meme():
   json_data = json.loads(response.text)
   return json_data['url']
 
+## getting people names from tv api
+def get_people_print_multiple(who):
+    response = requests.get(f'https://api.tvmaze.com/search/people{who}')
+    json_data = json.loads(response.text)
+
+    if not json_data:
+        return 'no names found in database matching what was inputted into the chat'
+
+    results_names = []
+    for item_dict in json_data[:5]:
+        if 'person' in item_dict and 'name' in item_dict['person']:
+            results_names.append(item_dict['person']['name'])
+
+    if results_names:
+        return ', '.join(results_names) # Returns a string of names separated by commas
+    else:
+        return 'no suitable names found in the first 5 items'
+
 ## Logging on into server as the bot
 class MyClient(discord.Client):
   async def on_ready(self):
@@ -47,6 +65,10 @@ class MyClient(discord.Client):
       poll_message = await message.channel.send(embed=embed)
       await poll_message.add_reaction('👍')
       await poll_message.add_reaction('👎')
+
+    if message.content.startswith('`ppl'):
+      search_text = '?q=' + message.content[len('`ppl'):].strip()
+      await message.channel.send(get_people_print_multiple(search_text))
 
 ## intents
 intents = discord.Intents.default()
