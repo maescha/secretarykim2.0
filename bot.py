@@ -33,12 +33,15 @@ def get_people_print_multiple(who):
 
         if person_data:
            name = person_data.get('name')
-           image = person_data.get('image')
+           image_data = person_data.get('image')
+
+           if image_data:
+             medium_image_url = image_data.get('medium')
 
         if name:
            results_data.append({
               'name': name,
-              'image' : image,
+              'image' : medium_image_url,
            })
 
     if results_data:
@@ -78,7 +81,6 @@ class MyClient(discord.Client):
 
     if message.content.startswith('`ppl'):
       search_text = '?q=' + message.content[len('`ppl'):].strip()
-      # await message.channel.send(get_people_print_multiple(search_text))
 
       people_results = get_people_print_multiple(search_text)
 
@@ -86,20 +88,21 @@ class MyClient(discord.Client):
         await message.channel.send('Sorry, I couldn\'t find anyone with that name in the tvmaze api database')
         await message.channel.send('Please check the logs in case I ran into an error fetching this data for you!')
 
-      response_message = '##Top People Found:'
+      response_message = '## Top 5 People Matches: \n'
 
       for i, person in enumerate(people_results):
         name = person.get('name', 'N/A')
         image_url = person.get('image')
 
-        response_message += f'{i+1}. **{name}**\n'
+        response_message += f'{i+1}. **{name}**'
 
         if image_url:
-          response_message += f' - [Image]({image_url})\n'
+          response_message += f' : [Image]({image_url})\n'
 
         if len(response_message) > 2000:
           response_message = response_message[:1990] + "...\n(Message too long, truncated)"
 
+      await message.channel.send('Based on your search, here are the top matches from the TVMaze API database')
       await message.channel.send(response_message)
 
 
