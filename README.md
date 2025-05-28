@@ -1,10 +1,12 @@
 # Secretary Kim 2.0
 
-## <img align="right" alt="transparent image used as the profile picture of Secretary Kim" src="https://cdn.discordapp.com/avatars/1375222840340774994/203937427685ca37c5fb981f7fd96ff5?size=1024)"> </img>
+<img align="left" alt="transparent image used as the profile picture of Secretary Kim" src="https://cdn.discordapp.com/avatars/1375222840340774994/203937427685ca37c5fb981f7fd96ff5?size=1024)"> </img>
 
-Hello! I am Secretary Kim 2.0
+> Hello! I am Secretary Kim 2.0 👋
 
-A revamped version of an old [Discord bot I created back in 2021](https://github.com/maescha/secretary-kim) -- this revamp now features Python and is used as the Final Project for the [Codédex](codedex.io) Python course
+<sub>Secretary Kim is an old [Discord bot I created back in 2021](https://github.com/maescha/secretary-kim) -- </sub>
+
+**This new 2.0 revamp features code redone in Python and is used as the Final Project for the [Codédex](codedex.io) Python course**
 
 Secretary Kim's duties include the following...
 
@@ -51,9 +53,10 @@ You will know that you are successfully logged into your Discord server as the b
 
 <img src="https://res.cloudinary.com/dsns0avdz/image/upload/v1748399464/Discord_qNmr1K3G6W_jsgwfl.gif"> </img>
 
-`meme
+      `meme
+
 <img src="https://res.cloudinary.com/dsns0avdz/image/upload/v1748399587/Discord_r1zOLRyWIn_wrke4p.gif"> </img>
 
-     `ppl
+       `ppl
 
 <img src="https://res.cloudinary.com/dsns0avdz/image/upload/c_fill,h_400,w_400/v1748399835/Discord_mQ1uZhxbig_fw0qqh.gif"> </img>
