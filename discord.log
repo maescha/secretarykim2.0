@@ -46,3 +46,67 @@
 [2025-05-27 19:57:17] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
 [2025-05-27 19:57:58] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
 [2025-05-27 19:57:59] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 19:58:40] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 19:58:40] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 19:59:21] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 19:59:21] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:00:02] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:00:02] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:00:43] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:00:44] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:01:25] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:01:25] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:02:06] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:02:06] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:02:47] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:02:47] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:03:29] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:03:29] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:04:10] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:04:10] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:04:51] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:04:51] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:05:32] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:05:32] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:06:14] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:06:14] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:06:55] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:06:55] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:07:36] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:07:36] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:08:17] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:08:17] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:08:59] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:08:59] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:09:40] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:09:40] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:10:21] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:10:21] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:11:02] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:11:02] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:11:44] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:11:44] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:12:25] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:12:25] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:13:06] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:13:06] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:13:47] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:13:47] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:14:29] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:14:29] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:15:10] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:15:10] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:15:51] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:15:51] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:16:32] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:16:32] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:17:14] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:17:14] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:17:55] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:17:55] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:18:36] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:18:36] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:19:17] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:19:17] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2025-05-27 20:19:59] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 8.
+[2025-05-27 20:19:59] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
