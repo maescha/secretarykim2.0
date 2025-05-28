@@ -15,7 +15,7 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 
 ## getting memes from memeapi // meme-api.com/gimme
 def get_meme():
-  response = requests.get('https://meme-api.com/gimme')
+  response = requests.get('https://meme-api.com/gimme/wholesomememes')
   json_data = json.loads(response.text)
   return json_data['url']
 
