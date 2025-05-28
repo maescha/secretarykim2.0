@@ -27,15 +27,25 @@ def get_people_print_multiple(who):
     if not json_data:
         return 'no names found in database matching what was inputted into the chat'
 
-    results_names = []
+    results_data = []
     for item_dict in json_data[:5]:
-        if 'person' in item_dict and 'name' in item_dict['person']:
-            results_names.append(item_dict['person']['name'])
+        person_data = item_dict.get('person')
 
-    if results_names:
-        return ', '.join(results_names) # Returns a string of names separated by commas
+        if person_data:
+           name = person_data.get('name')
+           image = person_data.get('image')
+
+        if name:
+           results_data.append({
+              'name': name,
+              'image' : image,
+           })
+
+    if results_data:
+      # You'll likely want to return the list of dictionaries, not a joined string
+      return results_data
     else:
-        return 'no suitable names found in the first 5 items'
+      return 'no suitable items found in the first 5 results'
 
 ## Logging on into server as the bot
 class MyClient(discord.Client):
