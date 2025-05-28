@@ -30,7 +30,8 @@ class MyClient(discord.Client):
       return
 
     if message.content.startswith('`hello'):
-      await message.channel.send('Hello World!')
+      await message.channel.send('# Hello World :earth_americas:')
+      await message.channel.send(f'-# **and hello {message.author.display_name}!** :wave:')
 
     if message.content.startswith('`meme'):
       await message.channel.send(get_meme())
