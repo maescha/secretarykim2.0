@@ -16,7 +16,7 @@ Secretary Kim's duties include the following...
 - making a simple agree/disagree poll using :thumbsup: and :thumbsdown: reacts
 - searching through the tvmaze api for a list of names that match with whatever the user has inputted, while also providing an image if available
 
-## How To Replicating
+## How To Replicate
 
 1. run `pip install -r requirements.txt`
 
