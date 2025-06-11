@@ -1,6 +1,7 @@
 import discord
 import logging
 import os
+from commands.hello import command_hello
 from dotenv import load_dotenv
 
 import requests
@@ -50,6 +51,9 @@ def get_people_print_multiple(who):
     else:
       return 'no suitable items found in the first 5 results'
 
+def is_command(message, command):
+  return message.content.startswith(f"`{command}")
+
 ## Logging on into server as the bot
 class MyClient(discord.Client):
   async def on_ready(self):
@@ -60,30 +64,20 @@ class MyClient(discord.Client):
     if message.author == self.user:
       return
 
-    if message.content.startswith('`hello'):
-      await message.channel.send('# Hello World :earth_americas:')
-      await message.channel.send(f'-# **and hello {message.author.display_name}!** :wave:')
-      return
-
-    if message.content.startswith('`meme'):
+    if is_command(message, 'hello'):
+      await command_hello(message)
+    elif is_command(message, 'meme'):
       await message.channel.send(get_meme())
-      return
-
-    if message.content.startswith('`ping'):
+    elif is_command(message, 'ping'):
       await message.channel.send('pong!')
-      return
-
-    if message.content.startswith('`poll'):
+    elif is_command(message, 'poll'):
       # removes the `poll text in the title
-      title_content = message.content[len('`poll'):].strip()
-
+      title_content = message.content[len('poll'):].strip()
       embed = discord.Embed(title=title_content, description='I, Secretary Kim, have voted once in both choices.')
       poll_message = await message.channel.send(embed=embed)
       await poll_message.add_reaction('👍')
       await poll_message.add_reaction('👎')
-      return
-
-    if message.content.startswith('`ppl'):
+    elif is_command(message, 'ppl'):
       search_text = '?q=' + message.content[len('`ppl'):].strip()
 
       people_results = get_people_print_multiple(search_text)
@@ -108,7 +102,6 @@ class MyClient(discord.Client):
 
       await message.channel.send('Based on your search, here are the top matches from the TVMaze API database')
       await message.channel.send(response_message)
-      return
 
 
 
