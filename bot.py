@@ -63,12 +63,15 @@ class MyClient(discord.Client):
     if message.content.startswith('`hello'):
       await message.channel.send('# Hello World :earth_americas:')
       await message.channel.send(f'-# **and hello {message.author.display_name}!** :wave:')
+      return
 
     if message.content.startswith('`meme'):
       await message.channel.send(get_meme())
+      return
 
     if message.content.startswith('`ping'):
       await message.channel.send('pong!')
+      return
 
     if message.content.startswith('`poll'):
       # removes the `poll text in the title
@@ -78,6 +81,7 @@ class MyClient(discord.Client):
       poll_message = await message.channel.send(embed=embed)
       await poll_message.add_reaction('👍')
       await poll_message.add_reaction('👎')
+      return
 
     if message.content.startswith('`ppl'):
       search_text = '?q=' + message.content[len('`ppl'):].strip()
@@ -104,6 +108,7 @@ class MyClient(discord.Client):
 
       await message.channel.send('Based on your search, here are the top matches from the TVMaze API database')
       await message.channel.send(response_message)
+      return
 
 
 
