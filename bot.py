@@ -1,11 +1,13 @@
 import discord
 import logging
 import os
-from commands.hello import command_hello
 from dotenv import load_dotenv
 
-import requests
-import json
+from commands.hello import command_hello
+from commands.ping import command_ping
+from commands.meme import command_meme
+from commands.ppl import command_ppl
+from commands.poll import command_poll
 
 load_dotenv()
 bot_token= os.getenv('DISCORDTOKEN')
@@ -13,43 +15,6 @@ bot_token= os.getenv('DISCORDTOKEN')
 
 ## basic logging
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-
-## getting memes from memeapi // meme-api.com/gimme
-def get_meme():
-  response = requests.get('https://meme-api.com/gimme/wholesomememes')
-  json_data = json.loads(response.text)
-  return json_data['url']
-
-## getting people names from tv api
-def get_people_print_multiple(who):
-    response = requests.get(f'https://api.tvmaze.com/search/people{who}')
-    json_data = json.loads(response.text)
-
-    if not json_data:
-        return 'no names found in database matching what was inputted into the chat'
-
-    results_data = []
-    for item_dict in json_data[:5]:
-        person_data = item_dict.get('person')
-
-        if person_data:
-           name = person_data.get('name')
-           image_data = person_data.get('image')
-
-           if image_data:
-             medium_image_url = image_data.get('medium')
-
-        if name:
-           results_data.append({
-              'name': name,
-              'image' : medium_image_url,
-           })
-
-    if results_data:
-      # You'll likely want to return the list of dictionaries, not a joined string
-      return results_data
-    else:
-      return 'no suitable items found in the first 5 results'
 
 def is_command(message, command):
   return message.content.startswith(f"`{command}")
@@ -67,42 +32,13 @@ class MyClient(discord.Client):
     if is_command(message, 'hello'):
       await command_hello(message)
     elif is_command(message, 'meme'):
-      await message.channel.send(get_meme())
+      await command_meme(message)
     elif is_command(message, 'ping'):
-      await message.channel.send('pong!')
+      await command_ping(message)
     elif is_command(message, 'poll'):
-      # removes the `poll text in the title
-      title_content = message.content[len('poll'):].strip()
-      embed = discord.Embed(title=title_content, description='I, Secretary Kim, have voted once in both choices.')
-      poll_message = await message.channel.send(embed=embed)
-      await poll_message.add_reaction('👍')
-      await poll_message.add_reaction('👎')
+      await command_poll(message)
     elif is_command(message, 'ppl'):
-      search_text = '?q=' + message.content[len('`ppl'):].strip()
-
-      people_results = get_people_print_multiple(search_text)
-
-      if not people_results:
-        await message.channel.send('Sorry, I couldn\'t find anyone with that name in the tvmaze api database')
-        await message.channel.send('Please check the logs in case I ran into an error fetching this data for you!')
-
-      response_message = '## Top 5 People Matches: \n'
-
-      for i, person in enumerate(people_results):
-        name = person.get('name', 'N/A')
-        image_url = person.get('image')
-
-        response_message += f'{i+1}. **{name}**'
-
-        if image_url:
-          response_message += f' : [Image]({image_url})\n'
-
-        if len(response_message) > 2000:
-          response_message = response_message[:1990] + "...\n(Message too long, truncated)"
-
-      await message.channel.send('Based on your search, here are the top matches from the TVMaze API database')
-      await message.channel.send(response_message)
-
+      await command_ppl(message)
 
 
 ## intents
